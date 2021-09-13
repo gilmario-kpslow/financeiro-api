@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FinanceiroApplication<PersonalTrueFinanceiro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.com.truesystem.truefinanceiro.FinanceiroApplication",
+            "projectName": "PersonalTrueFinanceiro",
+            "args": ""
+        }
+    ]
+}
