@@ -56,7 +56,7 @@ public class SegurancaService {
 
         String token = Jwt.issuer(ISSUER)
                 .upn(usuario.get().getUsername())
-                .groups(new HashSet<>(Arrays.asList("USER")))
+                .groups(new HashSet<>(Arrays.asList("USER", "ADMIN")))
                 .claim(Claims.full_name.name(), usuario.get().getNome())
                 .expiresIn(Duration.ofDays(1))
                 .sign();

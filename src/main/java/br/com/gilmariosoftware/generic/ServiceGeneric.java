@@ -16,9 +16,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author gilmario
  * @param <T>
  * @param <P>
+ * @param <R>
  */
 @Getter
-public abstract class ServiceGeneric<T extends GenericEntity, P extends GenericResponse> {
+public abstract class ServiceGeneric<T extends GenericEntity, P extends GenericResponse, R extends GenericRequest> {
 
     @Inject
     SegurancaService segurancaService;
@@ -30,7 +31,7 @@ public abstract class ServiceGeneric<T extends GenericEntity, P extends GenericR
         return segurancaService.getUsuarioLogado();
     }
 
-    protected <R extends GenericRequest, C extends Class<T>> T toEntity(R request) {
+    protected <C extends Class<T>> T toEntity(R request) {
 
         if (Objects.isNull(request.getId())) {
             return modelMapper.map(request, getClassEntity());
@@ -50,7 +51,7 @@ public abstract class ServiceGeneric<T extends GenericEntity, P extends GenericR
     }
 
     @Transactional
-    public <R extends GenericRequest> Optional<P> salvar(R request) {
+    public Optional<P> salvar(R request) {
         return toResponse((T) getRepository().save(toEntity(request)));
     }
 

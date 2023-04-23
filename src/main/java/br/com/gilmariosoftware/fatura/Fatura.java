@@ -37,7 +37,7 @@ public class Fatura extends GenericEntity implements Serializable {
     private Usuario usuario;
     @Column(length = 255, nullable = false)
     private LocalDate diaVencimento;
-    @Column(length = 255, nullable = false)
+    @Column(length = 255, nullable = false, unique = true)
     @NotBlank
     private String nome;
     @Column(scale = 2, precision = 15, nullable = true)

@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author gilmario
  */
 @RequestScoped
-public class ContaCorrenteService extends ServiceGeneric<ContaCorrente, ContaCorrenteResponse> {
+public class ContaCorrenteService extends ServiceGeneric<ContaCorrente, ContaCorrenteResponse, ContaCorrenteRequest> {
 
     @Inject
     ContaCorrenteRepository repository;

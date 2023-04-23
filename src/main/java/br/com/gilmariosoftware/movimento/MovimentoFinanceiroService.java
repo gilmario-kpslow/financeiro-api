@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author gilmario
  */
 @RequestScoped
-public class MovimentoFinanceiroService extends ServiceGeneric<MovimentoFinanceiro, MovimentoFinanceiroResponse> {
+public class MovimentoFinanceiroService extends ServiceGeneric<MovimentoFinanceiro, MovimentoFinanceiroResponse, MovimentoFinanceiroRequest> {
 
     @Inject
     MovimentoFinanceiroRepository repository;

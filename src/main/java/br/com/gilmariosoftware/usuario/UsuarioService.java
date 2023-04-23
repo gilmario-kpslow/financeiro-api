@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author gilmario
  */
 @RequestScoped
-public class UsuarioService extends ServiceGeneric<Usuario, UsuarioResponse> {
+public class UsuarioService extends ServiceGeneric<Usuario, UsuarioResponse, UsuarioRequest> {
 
     @Inject
     UsuarioRepository repository;
