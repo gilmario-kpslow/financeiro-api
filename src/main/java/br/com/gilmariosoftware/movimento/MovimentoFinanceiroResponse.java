@@ -1,6 +1,6 @@
 package br.com.gilmariosoftware.movimento;
 
-import br.com.gilmariosoftware.contacorrente.ContaCorrente;
+import br.com.gilmariosoftware.contacorrente.Conta;
 import br.com.gilmariosoftware.generic.GenericResponse;
 import br.com.gilmariosoftware.usuario.Usuario;
 import java.math.BigDecimal;
@@ -24,6 +24,6 @@ public class MovimentoFinanceiroResponse extends GenericResponse {
     private LocalDate dataPagamento;
     private LocalTime horaPagamento;
     private TipoMovimento tipoMovimento;
-    private ContaCorrente contaCorrente;
+    private Conta contaCorrente;
     private StatusMovimentoFinanceiro statusMovimento;
 }

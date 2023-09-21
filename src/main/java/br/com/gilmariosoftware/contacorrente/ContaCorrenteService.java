@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author gilmario
  */
 @RequestScoped
-public class ContaCorrenteService extends ServiceGeneric<ContaCorrente, ContaCorrenteResponse, ContaCorrenteRequest> {
+public class ContaCorrenteService extends ServiceGeneric<Conta, ContaCorrenteResponse, ContaCorrenteRequest> {
 
     @Inject
     ContaCorrenteRepository repository;
@@ -22,8 +22,8 @@ public class ContaCorrenteService extends ServiceGeneric<ContaCorrente, ContaCor
     }
 
     @Override
-    public Class<ContaCorrente> getClassEntity() {
-        return ContaCorrente.class;
+    public Class<Conta> getClassEntity() {
+        return Conta.class;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class ContaCorrenteService extends ServiceGeneric<ContaCorrente, ContaCor
     }
 
     @Override
-    protected Optional<ContaCorrenteResponse> toResponse(ContaCorrente t) {
+    protected Optional<ContaCorrenteResponse> toResponse(Conta t) {
         return super.toResponse(t);
     }
 

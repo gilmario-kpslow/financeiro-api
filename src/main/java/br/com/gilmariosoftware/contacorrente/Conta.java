@@ -28,7 +28,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Cacheable
-public class ContaCorrente extends GenericEntity implements Serializable {
+public class Conta extends GenericEntity implements Serializable {
 
     @JoinColumn(referencedColumnName = "id", name = "usuario_id", nullable = false)
     @NotNull

@@ -1,6 +1,6 @@
 package br.com.gilmariosoftware.movimento;
 
-import br.com.gilmariosoftware.contacorrente.ContaCorrente;
+import br.com.gilmariosoftware.contacorrente.Conta;
 import br.com.gilmariosoftware.generic.GenericEntity;
 import br.com.gilmariosoftware.usuario.Usuario;
 import java.io.Serializable;
@@ -61,10 +61,10 @@ public class MovimentoFinanceiro extends GenericEntity implements Serializable {
     @Column(length = 30, nullable = false)
     @NotNull
     private TipoMovimento tipoMovimento;
-    @JoinColumn(referencedColumnName = "id", name = "conta_corrente_id", nullable = false)
+    @JoinColumn(referencedColumnName = "id", name = "conta_id", nullable = false)
     @NotNull
     @ManyToOne
-    private ContaCorrente contaCorrente;
+    private Conta contaCorrente;
     @NotNull
     @Column(length = 20, nullable = false)
     @Enumerated(EnumType.STRING)

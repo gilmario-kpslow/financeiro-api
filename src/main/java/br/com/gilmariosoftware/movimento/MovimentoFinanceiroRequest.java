@@ -1,6 +1,6 @@
 package br.com.gilmariosoftware.movimento;
 
-import br.com.gilmariosoftware.contacorrente.ContaCorrente;
+import br.com.gilmariosoftware.contacorrente.Conta;
 import br.com.gilmariosoftware.generic.GenericRequest;
 import java.math.BigDecimal;
 import lombok.Getter;
@@ -18,6 +18,6 @@ public class MovimentoFinanceiroRequest extends GenericRequest {
     private BigDecimal valorOriginal;
     private BigDecimal valorPago;
     private TipoMovimento tipoMovimento;
-    private ContaCorrente contaCorrente;
+    private Conta contaCorrente;
 
 }

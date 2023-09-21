@@ -1,4 +1,4 @@
-package br.com.gilmariosoftware.contacorrente;
+package br.com.gilmariosoftware.planocontas;
 
 import br.com.gilmariosoftware.generic.GenericResource;
 import java.util.List;
@@ -17,28 +17,28 @@ import javax.ws.rs.core.MediaType;
  *
  * @author gilmario
  */
-@Path("conta-corrente")
+@Path("movimento-financeiro")
 @DenyAll
 @RequestScoped
-public class ContaCorrentResource extends GenericResource<Conta, ContaCorrenteResponse> {
+public class PlanoContasResource extends GenericResource<PlanoContas, PlanoContasResponse> {
 
     @Inject
-    ContaCorrenteService service;
+    PlanoContasService service;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed(value = {"USER"})
-    public List<ContaCorrenteResponse> listarTodos() {
+    public List<PlanoContasResponse> listarTodos() {
         return service.listarTodos();
     }
 
     @POST
     @RolesAllowed(value = {"USER"})
-    public Optional<ContaCorrenteResponse> create(ContaCorrenteRequest request) {
+    public Optional<PlanoContasResponse> create(PlanoContasRequest request) {
         return service.salvar(request);
     }
 
-    ContaCorrenteService getService() {
+    PlanoContasService getService() {
         return this.service;
     }
 
